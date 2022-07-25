@@ -35,5 +35,14 @@
         android:id="@+id/storeFragment"
         android:name="com.hady.shoestore.StoreFragment"
         android:label="fragment_store"
-        tools:layout="@layout/fragment_store" />
+        tools:layout="@layout/fragment_store" >
+        <action
+            android:id="@+id/action_storeFragment_to_newShoeFragment"
+            app:destination="@id/newShoeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newShoeFragment"
+        android:name="com.hady.shoestore.NewShoeFragment"
+        android:label="fragment_new_shoe"
+        tools:layout="@layout/fragment_new_shoe" />
 </navigation>

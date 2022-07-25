@@ -7,7 +7,8 @@
     <data>
         <variable
             name="StoreViewModel"
-            type="com.hady.shoestore.StoreFragment" />
+            type="com.hady.shoestore.StoreViewModel" />
+
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -43,7 +44,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="4dp"
-                android:text="Name"
+                android:hint="Name"
+                android:text="@{StoreViewModel.shoeName}"
                 android:textAlignment="center" />
 
             <TextView
@@ -52,7 +54,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="4dp"
-                android:text="Size"
+                android:hint="Size"
+                android:text="@{StoreViewModel.shoeSize}"
                 android:textAlignment="center" />
 
             <TextView
@@ -61,7 +64,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="4dp"
-                android:text="Company"
+                android:hint="Company"
+                android:text="@{StoreViewModel.shoeCompany}"
                 android:textAlignment="center" />
 
             <TextView
@@ -70,9 +74,25 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="4dp"
-                android:text="Description"
+                android:hint="Description"
+                android:text="@{StoreViewModel.shoeDescription}"
                 android:textAlignment="center" />
         </LinearLayout>
+
+        <Button
+            android:id="@+id/addNewShoeButton"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:text="Add new Shoe"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
