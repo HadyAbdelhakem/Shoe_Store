@@ -6,7 +6,7 @@
     
     <data>
         <variable
-            name="StoreViewModel"
+            name="storeViewModel"
             type="com.hady.shoestore.StoreViewModel" />
 
     </data>
@@ -45,7 +45,7 @@
                 android:layout_weight="1"
                 android:padding="4dp"
                 android:hint="Name"
-                android:text="@{StoreViewModel.shoeName}"
+                android:text="@={storeViewModel._shoeName}"
                 android:textAlignment="center" />
 
             <TextView
@@ -55,7 +55,7 @@
                 android:layout_weight="1"
                 android:padding="4dp"
                 android:hint="Size"
-                android:text="@{StoreViewModel.shoeSize}"
+                android:text="@={storeViewModel._shoeSize}"
                 android:textAlignment="center" />
 
             <TextView
@@ -65,7 +65,7 @@
                 android:layout_weight="1"
                 android:padding="4dp"
                 android:hint="Company"
-                android:text="@{StoreViewModel.shoeCompany}"
+                android:text="@={storeViewModel._shoeCompany}"
                 android:textAlignment="center" />
 
             <TextView
@@ -75,7 +75,71 @@
                 android:layout_weight="1"
                 android:padding="4dp"
                 android:hint="Description"
-                android:text="@{StoreViewModel.shoeDescription}"
+                android:text="@={storeViewModel._shoeDescription}"
+                android:textAlignment="center" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/shoe_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:paddingLeft="16dp"
+            android:text="Shoe_2"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/shoe_2">
+
+            <TextView
+                android:id="@+id/name_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="4dp"
+                android:hint="-"
+                android:text="@={storeViewModel._shoeName_2}"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/size_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="4dp"
+                android:hint="-"
+                android:text="@={storeViewModel._shoeSize_2}"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/company_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="4dp"
+                android:hint="-"
+                android:text="@={storeViewModel._shoeCompany_2}"
+                android:textAlignment="center" />
+
+            <TextView
+                android:id="@+id/description_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="4dp"
+                android:hint="-"
+                android:text="@={storeViewModel._shoeDescription_2}"
                 android:textAlignment="center" />
         </LinearLayout>
 
@@ -91,7 +155,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout3" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

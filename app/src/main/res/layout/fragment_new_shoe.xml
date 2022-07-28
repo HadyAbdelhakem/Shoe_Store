@@ -6,8 +6,8 @@
 
     <data>
         <variable
-            name="newShoe"
-            type="com.hady.shoestore.NewShoeFragment" />
+            name="addViewModel"
+            type="com.hady.shoestore.StoreViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -20,6 +20,7 @@
             android:layout_marginTop="64dp"
             android:inputType="textPersonName"
             android:hint="Name"
+            android:text="@={addViewModel._shoeName_2}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
@@ -46,6 +47,7 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:hint="Size"
+            android:text="@={addViewModel._shoeSize_2}"
             style="@style/EditTextStyle"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -58,16 +60,18 @@
             android:ems="10"
             android:inputType="textPersonName"
             android:hint="Company"
+            android:text="@={addViewModel._shoeCompany_2}"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/editTextNewShoeSize" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName4"
+            android:id="@+id/editTextNewShoeDesc"
             style="@style/EditTextStyle"
             android:layout_marginTop="16dp"
             android:ems="10"
             android:inputType="textPersonName"
+            android:text="@={addViewModel._shoeDescription_2}"
             android:hint="Description"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -83,7 +87,7 @@
             android:text="Add"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4" />
+            app:layout_constraintTop_toBottomOf="@+id/editTextNewShoeDesc" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>
