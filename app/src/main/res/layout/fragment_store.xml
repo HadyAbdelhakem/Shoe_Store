@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+<!-- ConstraintLayout has better performance
+and more versatile
+and i see  it's not wrong to use it for everything -->
+
+
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -89,6 +95,7 @@
             android:textStyle="bold"
             android:textColor="@color/black"
             android:textSize="18sp"
+            android:visibility="invisible"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
@@ -108,7 +115,6 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="4dp"
-                android:hint="-"
                 android:text="@={storeViewModel._shoeName_2}"
                 android:textAlignment="center" />
 
@@ -118,7 +124,6 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="4dp"
-                android:hint="-"
                 android:text="@={storeViewModel._shoeSize_2}"
                 android:textAlignment="center" />
 
@@ -128,7 +133,6 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="4dp"
-                android:hint="-"
                 android:text="@={storeViewModel._shoeCompany_2}"
                 android:textAlignment="center" />
 
@@ -138,7 +142,6 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:padding="4dp"
-                android:hint="-"
                 android:text="@={storeViewModel._shoeDescription_2}"
                 android:textAlignment="center" />
         </LinearLayout>
